@@ -32,6 +32,11 @@ public class Bus extends Transport<DriverD> {
     }
 
     @Override
+    public void doDiagnostics() {
+        throw new UnsupportedOperationException("Автобус не может проходить диагностику");
+    }
+
+    @Override
     public void pitStop() {
         System.out.println("Пит-стоп автобуса");
     }

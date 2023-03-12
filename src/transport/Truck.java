@@ -83,4 +83,9 @@ public class Truck extends Transport<DriverC> {
     public void printType() {
         System.out.println("Грузоподъемность: "+ loadType);
     }
+
+    @Override
+    public void doDiagnostics() {
+        System.out.println("Грузовик проходит диагностику");
+    }
 }
