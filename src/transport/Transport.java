@@ -44,7 +44,12 @@ public abstract class Transport<T extends Driver> implements Competing {
     }
 
     public void setDriver(T driver) {
-        this.driver = driver;
+        if(driver != null && driver.isAvailLicense() != false){
+            this.driver = driver;
+        }else{
+            throw new RuntimeException("Не указан тип прав или прав нет");
+        }
+
     }
 
     public abstract void startMove();
@@ -52,5 +57,6 @@ public abstract class Transport<T extends Driver> implements Competing {
     public abstract void stopMove();
 
     public abstract void printType();
+    public abstract void doDiagnostics();
 
 }

@@ -26,7 +26,7 @@ public abstract class Driver {
     }
 
     public void setAvailLicense(boolean availLicense) {
-        this.availLicense = availLicense;
+            this.availLicense = availLicense;
     }
 
     public int getExperience() {
